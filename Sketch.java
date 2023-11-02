@@ -127,29 +127,107 @@ public class Sketch extends PApplet {
   }
 
   /**
-   * Use the modulus operator and just one 'if' statement to select the color.
+   * Use the modulus operator and just one 'if' statement to select the color. 
    */
   public void draw_section4(){
-
+    int intX = 0;
+    int intY = 0;
+    int intFillColour = 0;
+    
+    for (int x = 900; x < 1195; x += 6){
+      for (int y = 300; y < 595; y += 6){
+        intX = x + 3;
+        intY = y + 3;
+        
+        if (intFillColour == 0){
+          fill(255);
+          intFillColour += 1;
+        } else if (intFillColour == 1){
+          fill(30, 80, 120);
+          intFillColour -= 1;
+        }
+        
+        rect(intX, intY, 3, 3);
+      }
+    }
   }
 
   /**
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
    */
   public void draw_section5(){
+    int intX = 0; 
+    int intY = 0; 
+    int intEdge = 299;
 
+    for (int y = 0; y < 300; y += 6){
+      intEdge -= 6; 
+      for (int x = intEdge; x < 300; x += 6){
+        fill(255);
+        intX = 3 + x;
+        intY = 3 + y;
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 3, 3);
+      }
+    }
   }
 
   public void draw_section6(){
+    int intX = 0; 
+    int intY = 0; 
+    int intEdge = 293;
 
+    for (int y = 0; y < 300; y += 6){
+      intEdge += 6; 
+      for (int x = intEdge; 300 <= x && x < 600; x -= 6){
+        fill(255);
+        intX = 3 + x;
+        intY = 3 + y;
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 3, 3);
+      }
+    }
   }
 
   public void draw_section7(){
+    int intX = 0; 
+    int intY = 0; 
+    int intEdge = 900;
 
+    for (int y = 0; y < 300; y += 6){
+      intEdge -= 6; 
+      for (int x = intEdge; 600 <= x && x < 900; x -= 6){
+        fill(255);
+        intX = 3 + x;
+        intY = 3 + y;
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 3, 3);
+      }
+    }
   }
   
   public void draw_section8(){
+    int intX = 0; 
+    int intY = 0; 
+    int intEdge = 895;
 
+    for (int y = 0; y < 1200; y += 6){
+      intEdge += 6; 
+      for (int x = intEdge; 900 <= x && x < 1200; x += 6){
+        fill(255);
+        intX = 3 + x;
+        intY = 3 + y;
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 3, 3);
+      }
+    }
   }
-
 }
