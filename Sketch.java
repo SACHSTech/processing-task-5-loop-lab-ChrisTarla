@@ -132,6 +132,8 @@ public class Sketch extends PApplet {
   public void draw_section4(){
     int intX = 0;
     int intY = 0;
+    int intX2 = 0;
+    int intY2 = 0;
     int intFillColour = 0;
     
     for (int x = 900; x < 1195; x += 6){
@@ -148,6 +150,15 @@ public class Sketch extends PApplet {
         }
         
         rect(intX, intY, 3, 3);
+      }
+    }
+    for (int x2 = 900; x2 < 1195; x2 += 12){
+      for (int y2 = 300; y2 < 595; y2 += 6){
+        intX2 = x2 + 3;
+        intY2 = y2 + 3;
+
+        fill(30, 80, 120);
+        rect(intX2, intY2, 3, 3);
       }
     }
   }
